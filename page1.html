@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+<title>Home Page</title>
+<meta charset="UTF-8"> <!--Sets the character set-->
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!--Makes it so that this appears properly on any device size-->
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif; /*Sets font type*/
+} 
+</style>
+    <link rel="stylesheet" href="stylesheet.css"> <!--Links style sheet-->
+</head>
+<body>
+    <div class="header"> <!--Sets class for title-->
+        <h1>Computational Thinking</h1>
+        <p><i>Analysing its skills and applications</i></p>
+    </div>
+    <div class="navbar"> <!--Creates class with clickable links-->
+        <a href="page2.html">Changes from Sixth Form</a>
+        <a href="page3.html">Skills</a>
+        <a href="page4.html">Reflections</a>
+        <a href="accessibilityPage.html" class="right">
+            <img src="accessibilityImageNew.png" alt="Accessibility Icon" class="iconAccessibility"> <!--Added an image for the accessibility-->
+            Accessibility</a>
+    </div>
+<section>
+    <img class="mySlides" src = "graph.png" style="width:100%">
+    <img class="mySlides" src = "html.png" style="width:100%">
+    <img class="mySlides" src = "iteration.png" style="width:100%">
+</section>
+    <div class="row"> <!--This will act as a partition of the screen into a side bar and a main bar-->
+        <div class="side"> <!--This is the side darker bar on the website, it will contain key information-->
+            <div class="side-content">
+                <h2>A Description of This Website</h2>
+                <p>This site will cover some of the key topics of computational thinking such as: </p>
+                <ul>
+                    <li>Abstractiom</li>
+                    <li>Recursion</li>
+                    <li>Generalisation</li>
+                    <li>Algorithms</li>
+                    <li>Psuedocode</li>
+                    <li>And more...</li>
+                </ul>
+                <p>It will also cover key information about skills that are gained through the course, along with personal reflections on it.</p>
+            </div>
+        </div>
+        <div class="main">
+            <h1>What is Computational Thinking?</h1>
+            <p>Computational thinking is a <b>problem-solving approach</b> used in Computer Science and programming alike. It involves breaking down problems, understandinding potential patterns and constructions step by step solutions. Concepts such as <b>iteration, data structures (including graphs and trees) and recursion</b> are key to this.</p>
+            <img src="computerBrain.gif" alt="A gif of a graphic computer brain">
+            <h2>How is the course unit formatted?</h2>
+            <p>This course is formatted through <b>6</b> blocks. Each block involves a task that we will have to complete as a <b>group</b>, and typically covers a key computing technique.
+                Each block is assessed on the <b>algorithm</b> that is created, and its description and justification.
+            </p>
+            <h3>Is there anything else to be assessed on?</h3>
+            <p>Yes, there is a exam which contributes to 50% of the grade, along with a feedback task that makes up 10%. <br><br>
+                <b>Find below a table that shows how the marks are weighted: </b>
+            </p>
+            <div class="table-container">  <!--Creates a table using established table class-->
+                <table class="styled-table">
+                    <tr>
+                        <th> Section </th>
+                        <th> Weight </th>
+                    </tr>
+                    <tr>
+                        <td> <b> Coursework (Blocks) </b> </td>
+                        <td> <b> 40% </b></td>
+                    </tr>
+                    <tr>
+                        <td> <b> Personal Reflection </b> </td>
+                        <td> <b> 10% </b></td>
+                    </tr>
+                    <tr>
+                        <td><b> Exam </b></td>
+                        <td> <b> 50% </b></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer"> <!--Add a footer to the bottom of the page-->
+        <div class="footer-container"> <!--Create a container for different sections-->
+            <div class="footer-section"> <!--Create a section class-->
+                <h3>Address</h3>
+                <p>Kilburn Building, Oxford Rd, Manchester M13 9PL</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3> <!--Create a links section-->
+                <ul><!--Create bulleted list-->
+                    <li><a href="https://www.manchester.ac.uk/">University Homepage</a></li>
+                    <li><a href="https://www.cs.manchester.ac.uk/">The Department of Computer Science</a></li>
+                    <li><a href="https://www.foundation.se.manchester.ac.uk/study/">The Integrated Foundation Year</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Details</h3> <!--Contacts sets-->
+                <ul>
+                    <li>Email: CSOps@manchester.ac.uk</li>
+                    <li>Phone: 0161 306 6000</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="accessibility.js"></script>
+    <script src="carousel.js"></script> <!--Carousel script-->
+</body>
+</html>

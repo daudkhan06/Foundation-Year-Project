@@ -1,0 +1,563 @@
+/* Header */
+.header { /*Sets the attributes of the header class*/
+    padding: 80px;
+    text-align: centre;
+    background:#4682B4;
+    color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header h1 { /*Sets the attributes of the h1 inside of header class*/
+    font-size: 60px;
+}
+
+.header p {
+    font-size: 20px;
+}
+
+/* Navbar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a { /*Attributes of links inside navbar class*/
+    float: left;
+    display: block;
+    color: white;
+    text-align: centre;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a.right { /*Attribute of right link*/
+    float: right;
+}
+
+.navbar a:hover { /*Defines what happens when a link is hovered over*/
+    background-color: #ddd;
+    color: black;
+}
+
+.iconAccessibility { /*Define image*/
+    height: 1.8em; /*Dynamically adjusts size based on font*/
+    vertical-align: middle; /*Changes the image so that it is the same height as text*/
+    gap: 10px;
+}
+
+* { /*Ensures proper box sizing*/
+    box-sizing: border-box;
+}
+
+.row { /*Contains the column*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Now create two different unequal columns*/
+/*Left column attributes*/
+.side {
+    flex: 20%; /*Set the width on the screen*/
+    background-color: #999fa3;
+    padding: 20px; /*Add padding*/
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.side h2 {
+    font-weight: bold; /*Embolden the title*/
+}
+
+.side-content { /*Change background of text in side box*/
+    background-color: #ccd3d7;
+    padding: 5px;
+    border: #000000;
+    border-radius: 2px; /*Create outline*/
+    border-width: 10px;
+}
+
+.side-content:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 1); /* Add shadow on hover */
+    transform: scale(1.01);
+}
+
+.main { /* Main content on first page */
+    flex: 80%; /*Set width of main content*/
+    background-color: white;
+    padding: 20px; /*Add padding*/
+}
+
+/*Each of these sections formats the different text types in the main section*/
+.main h1 {
+    font-size: 70px;
+    background-color: #4682B4;
+    margin: 0px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.main h2 {
+    font-size: 50px;
+    background-color: #57a1de;
+    margin: 0px; 
+    padding: 20px;
+    margin-bottom: 20px; 
+    border-radius: 5px;
+}
+.main h3 {
+    font-size: 30px;
+    background-color: #63b6f9;
+    margin: 0px; 
+    padding: 20px; 
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.main p {
+    font-size: 20px;
+    background-color: #ccd3d7;
+    margin: 0px; 
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.main img {
+    width: 100%; /*Properly fill the area the image is in*/
+    height: auto;
+    object-fit: cover; /*Ensures it fills the space*/
+    display: block; /*Removes unwanted space below the image*/
+    margin-bottom: 20px; /*Makes it so that it does not touch the text box below*/
+}
+
+.main h1:hover, .main :hover, .main h2:hover, .main h3:hover, .main p:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 1); /* Add shadow on hover */
+    transform: scale(1.01);
+}
+
+/*Adds a responsive layout, when the screen < 700px wide, make stack on top of each other rather than next to*/
+@media screen and (max-width: 700px) {
+    .row{
+        flex-direction: column;
+    }
+    
+}
+
+/*Continues responsive layout, when screen width < 400px, stack the nav bars on top of each other rather than next to*/
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+
+/* Footer */
+.footer {
+    padding: 20px 0; /*Add text padding*/
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    background-color: #ddd;
+    color:black;
+    font-size: 14px; /*Change all font size in footer*/
+}
+
+.footer-container {
+    display:flex; /*Use flexbox to arrange contents*/
+    justify-content: space-around; /*Evenly space sections*/
+    max-width: 1200px; /*Limit width for better layout*/
+    margin:auto; /*Centre the footer on the page*/
+    padding: 0 20px; /*Add horizontal padding*/    
+}
+
+.footer-section {
+    flex: 1; /*Ensure equal width for each section*/
+    text-align: left;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px; /*Space below the h3 heading*/
+}
+
+.footer-section ul {
+    list-style-type: none; /*Remove bullet points*/
+    padding: 0px; /*Remove default padding*/
+}
+
+.footer-section ul li {
+    margin: 5px 0; /* Add spacing between list items */
+}
+
+.footer-section ul li a {
+    color: back; /* Ensure links are visible on light background */
+    text-decoration: none; /*Remove underline*/
+}
+
+.footer-section ul li a:hover{
+    text-decoration: underline; /*When hovered over, underline links*/
+}
+
+section { /*Set attributes for the container*/
+    width: 100%;
+    height: 300px;
+    overflow: hidden; /*Prevents layout shift*/
+    position: relative; /*Guarantees absolute positioning*/
+}
+
+/*Slides on First Page*/
+.mySlides {
+    width: 100%;
+    height: 100%; /*Forces image to fit the container*/
+    object-fit: cover; /* Keeps aspect ratio*/
+    position: absolute; 
+    top: 0;
+    left: 0;
+    display: none; /*Hides images initially*/
+}
+
+.description_box {
+    background: #78a6cc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 25px;
+    color: rgb(48, 42, 42);
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.description_box:hover {
+    background-color: #709cc0; /* Change background color on hover */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 1); /* Add shadow on hover */
+    transform: scale(1.01);
+}
+
+.description_box p {
+    font-size: 15px;
+}
+
+/*Topics Boxes - Page 2*/
+.sixth_form_topics {
+    background:#cfd4da;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 25px;
+    color: rgb(48, 42, 42);
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.sixth_form_topics:hover {
+    background-color: #c2c7cd; /* Change background color on hover */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 1); /* Add shadow on hover */
+    transform: scale(1.01);
+}
+
+.sixth_form_topics h5{ /*Sets the attributes for h5 inside sixth_form_topics class*/
+    font-size: 15px;
+}
+
+.FY_topics {
+    background:#cfd4da;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 25px;
+    margin-bottom: 70px;
+    color: rgb(48, 42, 42);
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.FY_topics:hover {
+    background-color: #c2c7cd; /* Change background color on hover */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 1); /* Add shadow on hover */
+    transform: scale(1.01);
+}
+
+.FY_topics h5{ /*Sets the attributes for h5 inside FY_topics class*/
+    font-size: 15px;
+}
+
+/*Create generic table handling*/
+.table-container {
+    width: 90%;
+    margin: 40px auto; /* Adds space around the table */
+}
+
+.styled-table {
+    width: 100%; /* Makes table full width */
+    border-collapse: collapse; /* Removes extra space between borders */
+    margin: 20px 0; /* Adds spacing around the table */
+    font-size: 18px; /* Adjusts font size */
+    text-align: left; /* Aligns text */
+}
+
+/* Style table headers */
+.styled-table th {
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    padding: 12px; /* Adds space inside headers */
+}
+
+/* Style table cells */
+.styled-table td {
+    padding: 10px; /* Adds space inside cells */
+    border-bottom: 1px solid #ddd; /* Adds border between rows */
+}
+
+/* Add hover effect */
+.styled-table tr:hover {
+    background-color: #f5f5f5; /* Light grey when hovered */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Centers images */
+    gap: 20px; /* Adds space between images */
+}
+
+.image1, .image2 {
+    height: 300px; /* Set a fixed height to keep them equal */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image fills the space properly */
+    border-radius: 10px;
+    margin-bottom: 50px;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.image1:hover {
+    opacity: 0.9; /* Reduces opacity on hover */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Adds shadow on hover */
+    transform: scale(1.05); /* Slightly enlarges the image */
+}
+
+.image2:hover {
+    opacity: 0.9; /* Reduces opacity on hover */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Adds shadow on hover */
+    transform: scale(1.05); /* Slightly enlarges the image */
+}
+
+:root{
+    --text-scale: 1; /*Sets base scale of one*/
+}
+
+.bold-text * { /*Creates general bold style that can be activated*/
+    font-weight: bold !important; /*This will be used in the js file*/
+}
+
+button { /*Set the attributes for the buttons in use on the accessibility page*/
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+    border: none;
+    background: rgb(196, 197, 198);
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    box-shadow: 0 0 0 2px black; /*Give the box an outline to make it more obvious*/
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+button:hover {
+    opacity: 1;
+    transform: scale(1.05); /* Slightly enlarges the image */
+}
+
+/* Page 3 - Skills */
+.course_info {
+    padding: 80px;
+    margin-top: 40px;
+    margin: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    background:#78a6cc;
+    color: white;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.course_info:hover {
+    background-color: #709cc0; /* Change background color on hover */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 1); /* Add shadow on hover */
+    transform: scale(1.01); /* Slightly enlarges the image */
+}
+
+.course_info h1 { /*Sets the attributes of the h1 inside of course_info class*/
+    font-size: 40px;
+    color:#333;
+}
+
+.header2 {
+    padding: 80px; /*Set the attributes of the header2 class */
+    margin-top: 40px;
+    margin: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    background: #cfd4da;
+    color: rgb(48, 42, 42);
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.header2:hover {
+    background-color: #c2c7cd; /* Change background color on hover */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 1); /* Add shadow on hover */
+    transform: scale(1.01); /* Slightly enlarges the image */
+}
+
+.header2 h1{
+    font-size: 30px;
+}
+
+/*Flashcards formatting*/
+.flashcards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates columns inside the grid container */
+    gap: 20px;
+    place-items: center; /*Centres all flashcards*/
+    width: 100%;
+}
+  
+.card {
+    perspective: 1000px; /* Enable 3D effect */
+    margin-top: 20px;   /* Adds space above each card */
+    margin-bottom: 20px; /* Adds space below each card */
+}
+  
+.card-inner {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    transform-style: preserve-3d; /* Necessary for the 3D effect */
+    transition: transform 1.5s; /* Smooth transition for the flip */
+}
+  
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* Flip the card on hover */
+}
+  
+/* Front and Back of the Card */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back side when flipped */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+  
+/* Styling for the front side (Question side) */
+.card-front {
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*Styling for the back side*/
+.card-back {
+    background-color: #2ecc71;
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    transform: rotateY(180deg); /* Initially rotate the back side 180deg */
+}
+
+/* Add some extra styling for the text in flashcards */
+.question {
+    font-size: 15px;
+    font-weight: bold;
+}
+  
+.answer {
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+}
+
+.topics-boxes img {
+    max-width: 30%; /*Size image*/
+    height: auto;
+    margin-left: 10px; /* Adds spacing */
+    border-radius: 10px; /* Does not touch edges */
+}
+
+.topics-boxes:hover {
+    background-color: #c2c7cd;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+    transform: scale(1.01);
+}
+
+.topics-boxes h1 {
+    margin-right: 10px; /*Adds a gap between large text and middle text*/
+}
+
+.topics-boxes p {
+    text-align: center;
+}
+
+/* Page 4 - Reflections */
+.reflection {
+    background:#78a6cc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 25px;
+    color: rgb(48, 42, 42);
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    display: flex;
+    flex-direction: column; /*Stack elements vertically*/
+    align-items: center;
+    text-align: left;
+}
+
+.reflection:hover {
+    background-color: #709cc0; /* Change background color on hover */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 1); /* Add shadow on hover */
+    transform: scale(1.01);
+}
+
+.reflection h1 {
+    font-size: 35px;
+}
+
+.reflection h2 {
+    font-size: 22px;
+}
+
+.reflection p {
+    font-size: 20px;
+    outline: #333;
+    padding: 10px;
+    background-color:#78a6cc;
+    padding: 5px 10px;
+    border: 4px solid #000000;
+    border-radius: 5px;
+}
+
+.reflection img {
+    width: 30%;
+    max-width: 60%; /*Prevent from being too large*/
+    margin-top: 10px; /*Add spacing*/
+
+}
+
+.topics-boxes {
+    background:#cfd4da;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 25px;
+    margin-bottom: 70px;
+    color: rgb(48, 42, 42);
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    display: flex;
+    align-items: center; /*Align text and image vertically*/
+    justify-content: flex-start; /*Ensures spacing*/
+    gap: 20px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+

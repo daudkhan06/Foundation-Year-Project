@@ -1,0 +1,65 @@
+<html lang="en"> 
+<head> 
+<title> Accessibility Page </title>
+<meta charset="UTF-8"> <!--Sets the character set-->
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!--Makes it so that this appears properly on any device size-->
+<style>
+body {
+font-family: Arial, Helvetica, sans-serif; /*Sets font type*/
+} 
+</style>
+<link rel="stylesheet" href="stylesheet.css"> <!--Links style sheet-->
+</head>
+<body>
+    <div class="header"> <!--Sets class for title-->
+        <h1>Accessibility</h1>
+        <p><i>Features for Universal Use</i></p>
+    </div>
+    <!-- Navigate to other pages -->
+    <div class="navbar"> 
+        <a href="page1.html"> Home </a>
+        <a href="page2.html"> Changes from Sixth Form </a>
+        <a href="page3.html"> Skills </a>
+        <a href="page4.html"> Reflections </a>
+        <a href="accessibilityPage.html" class="right">
+            <img src="accessibilityImageNew.png" alt="Accessibility Icon" class="iconAccessibility"> <!--Added an image for the accessibility-->
+            Accessibility </a>
+    </div>
+    <div class ="main">
+        <h3>Accessibility Options</h3>
+        <p><b>Adjust text size:</b></p>
+        <!--Creates three buttons for differeing text sizes-->
+        <button onclick="changeTextSize(1.15)">Increase Text</button> <!--Calls on Javascript function as defined in script-->
+        <button onclick="changeTextSize(0.8)">Decrease Text</button>
+        <button onclick="changeTextSize()">Reset</button>
+        <p><b>Bold text mode:</b></p>
+        <!--Toggle button for making text bold-->
+        <button onclick="toggleBoldText()">Toggle Bold Text</button>
+        <p>This is an example of the text that will be displayed.</p> <!--Adds a visual aid for tweaking accessibility features-->
+    </div>
+    <div class="footer"> <!--Add a footer to the bottom of the page-->
+        <div class="footer-container"> <!--Create a container for different sections-->
+            <div class="footer-section"> <!--Create a section class-->
+                <h3>Address</h3>
+                <p>Kilburn Building, Oxford Rd, Manchester M13 9PL</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3> <!--Create a links section-->
+                <ul><!--Create bulleted list-->
+                    <li><a href="https://www.manchester.ac.uk/">University Homepage</a></li>
+                    <li><a href="https://www.cs.manchester.ac.uk/">The Department of Computer Science</a></li>
+                    <li><a href="https://www.foundation.se.manchester.ac.uk/study/">The Integrated Foundation Year</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Details</h3> <!--Contacts sets-->
+                <ul>
+                    <li>Email: CSOps@manchester.ac.uk</li>
+                    <li>Phone: 0161 306 6000</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="accessibility.js"></script> <!--Link the script for use-->
+</body>
+</html>
