@@ -4,4 +4,10 @@ This project was originally developed as a group project using GitLab as part of
 ## My contributions: 
 
 - Worked on the layout
-- Implemented consistent css styling across all pages 
+- Implemented consistent css styling across all pages
+
+## Teck Stack:
+
+- HTML
+- CSS
+- JavaScript
