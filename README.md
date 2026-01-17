@@ -1,5 +1,5 @@
 # Foundation-Year-Project
-This was a group project I completed for the Foundation Year of BSc Computer Science at The University of Manchester
+This project was originally developed as a group project using GitLab as part of a university module (as part of my Foundation Year for BSc Computer Science) and later migrated to GitHub for portfolio purposes.
 
 ## My contributions: 
 
