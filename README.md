@@ -6,7 +6,7 @@ This project was originally developed as a group project using GitLab as part of
 - Worked on the layout
 - Implemented consistent css styling across all pages
 
-## Teck Stack:
+## Tech Stack:
 
 - HTML
 - CSS
